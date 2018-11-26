@@ -12,6 +12,8 @@ Description here.
 
 ## Making Swagger documentation public
 
+![API Gateway proxy route configuration example](images/swagger-proxy-route.png)
+
 1. Go to the API Gateway in ECS, and open at the Hackney Platform API.
 2. Configure the API you're working on to have a `/swagger` resource, with it's own `/{proxy+}` resource within. This will take precedence over top level `/{proxy+}` requests. This proxy should be configured to not require an API token, and should only permit requests to secure, public routes in the application.
 3. "Deploy" the API in the API Gateway to staging and test.
